@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FX TAE · elite trading journal</title>
+  <!-- main style injected (single styles.css) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- font awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="landing-page">
+
+  <!-- ========== LANDING PAGE (INDEX) ========== -->
+  <div class="landing-container">
+    <!-- top right social (unchanged) -->
+    <div class="top-right-social">
+      <div class="social-icons-top">
+        <a href="https://tiktok.com/@fx_tae_trader" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://instagram.com/fxtaetrader" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/fxtaetrader" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://t.me/fxtaetrader" target="_blank"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+
+    <!-- header with logo (fully visible) -->
+    <header class="main-header">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="logo-text">
+          <h1>FX TAE CHARTS JOURNAL</h1>
+          <span>join the 1% trading circle</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero + auth section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">master your trading journey</h1>
+        <p class="hero-subtitle">
+          track every trade · analyse performance · join elite community.<br>
+          professional journal built for the 1%.
+        </p>
+        <div class="features-grid">
+          <div class="feature-item"><i class="fas fa-book feature-icon"></i><div><h4>smart journal</h4><p>4 trades/day · psychology notes</p></div></div>
+          <div class="feature-item"><i class="fas fa-chart-line feature-icon"></i><div><h4>live analytics</h4><p>equity · win rate · calendar</p></div></div>
+          <div class="feature-item"><i class="fas fa-users feature-icon"></i><div><h4>1% community</h4><p>telegram · youtube · instagram</p></div></div>
+          <div class="feature-item"><i class="fas fa-graduation-cap feature-icon"></i><div><h4>fx tae academy</h4><p>direct mentorship</p></div></div>
+        </div>
+        <!-- fx tae social block -->
+        <div class="fx-tae-section">
+          <h3><i class="fas fa-chart-line"></i> fx tae charts trading journal</h3>
+          <p>your edge — systematic journaling, withdrawal & deposit manager, real‑time equity.</p>
+          <div class="fx-social-links">
+            <a href="https://t.me/fxtaetrader" target="_blank"><i class="fab fa-telegram"></i><span>telegram community</span></a>
+            <a href="https://www.youtube.com/@fxtaetrader" target="_blank"><i class="fab fa-youtube"></i><span>youtube channel</span></a>
+            <a href="https://instagram.com/fxtaetrader" target="_blank"><i class="fab fa-instagram"></i><span>instagram</span></a>
+            <a href="https://tiktok.com/@fx_tae_trader" target="_blank"><i class="fab fa-tiktok"></i><span>tiktok</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTH CARD (login / signup) -->
+      <div class="auth-section">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">login</button>
+          <button class="auth-tab" data-tab="signup">sign up</button>
+        </div>
+
+        <!-- login form -->
+        <form id="loginForm" class="auth-form active">
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> email</label>
+            <input type="email" id="loginEmail" class="form-control" placeholder="trader@example.com" required>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> password</label>
+            <div class="password-input">
+              <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required>
+              <button type="button" class="toggle-password" data-target="loginPassword"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+          <button type="submit" class="auth-btn"><i class="fas fa-arrow-right-to-bracket"></i> login to dashboard</button>
+          <div class="divider"><span>or continue with</span></div>
+          <button type="button" class="google-auth-btn" onclick="handleGoogleAuth('login')"><i class="fab fa-google"></i> google account</button>
+        </form>
+
+        <!-- signup form -->
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> full name</label>
+            <input type="text" id="signupName" class="form-control" placeholder="alex trader" required>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> email</label>
+            <input type="email" id="signupEmail" class="form-control" placeholder="trade@example.com" required>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> password</label>
+            <div class="password-input">
+              <input type="password" id="signupPassword" class="form-control" placeholder="min 8 chars" required>
+              <button type="button" class="toggle-password" data-target="signupPassword"><i class="fas fa-eye"></i></button>
+            </div>
+            <small class="password-hint">letters, numbers · at least 8 characters</small>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> confirm password</label>
+            <input type="password" id="confirmPassword" class="form-control" placeholder="confirm">
+          </div>
+          <div class="terms">
+            <input type="checkbox" id="agreeTerms" required>
+            <label for="agreeTerms">i agree to the terms & privacy policy</label>
+          </div>
+          <button type="submit" class="auth-btn"><i class="fas fa-user-plus"></i> create account</button>
+          <div class="divider"><span>or continue with</span></div>
+          <button type="button" class="google-auth-btn" onclick="handleGoogleAuth('signup')"><i class="fab fa-google"></i> sign up with google</button>
+        </form>
+
+        <!-- contact info side (always visible) -->
+        <div class="contact-info-side">
+          <h4><i class="fas fa-comments"></i> feel free to contact us</h4>
+          <div class="contact-details">
+            <div class="contact-item"><i class="fas fa-envelope"></i><div><span>email</span><strong>fxtae.chartprogram@gmail.com</strong></div></div>
+            <div class="contact-item"><i class="fas fa-phone"></i><div><span>phone</span><strong>+256 778997909</strong></div></div>
+            <div class="contact-item"><i class="fab fa-whatsapp"></i><div><span>whatsapp</span><strong>+256 778997909</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- landing footer -->
+    <footer class="footer">
+      <p>© 2026 FX TAE charts trading journal · professional platform for the 1% trading circle</p>
+    </footer>
+  </div>
+
+  <!-- toast container (global) -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- shared script -->
+  <script src="script.js"></script>
+</body>
+</html>
